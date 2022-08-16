@@ -153,7 +153,7 @@ const About = () => {
             </p>
 
             <p>
-              Fast-forward to today, and I've had the privilege of working as a freelance developer
+              Fast-forward to today, and I've had the privilege of working as a developer
               at <a href="https://us.mullenlowe.com/">an advertising agency</a>,{' '}
               <a href="https://www.hellopixelbot.com/">a start-up</a>. My main focus these days is
               building accessible, inclusive products and digital experiences for a variety of
