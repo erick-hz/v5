@@ -7,12 +7,11 @@ range: 'Jul 2021 - Present'
 url: 'https://www.hellopixelbot.com/'
 ---
 
-- Write modern, performant, maintainable code for a diverse array of client and internal projects.
-- Translate the design of a site into HTML and CSS code.
-  Structure content semantically
-  Ensure accessibility
-  Control fonts, templates, design forms and interactivity.
-  Program, change and maintain  websites.
-- Building web pages and applications with Javascript, React JS and React Native.
-- Clients included Skillstat, Lovesac, Marble Slab, Share Lawyers, and more
-- Multi-platform application development with React Native
+- Performed software development for clients in diverse industries consisting of a broad range of technologies.
+- JavaScript Projects: In total, I’ve played a key role in developing and delivering complex 6 Angular, 2 React.js, & 2 React-Native, and 6 Node.js applications.
+- Angular, React.js, & React-Native: Created page routing, components, modules, and RESTful services.
+- React.js, & React-Native: Implemented Redux Statement Management, created reducers, actions, & types
+- React Native: Developed & Tested Android & IOS mobile app across multiple devices & tablets
+- Node.js: Implemented Express.js framework. Created both public & authenticated API routes, database connections, and SMTP messaging. Used Knex to build SQL queries,   table migrations, transactions, and connection pooling.
+- MySQL: Created database schemas, queries, triggers, foreign keys, & unique indexe.
+- Unit Testing: Applied Unit Testing to Apex classes and triggers for a large Salesforce project.
