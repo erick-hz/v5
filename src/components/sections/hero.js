@@ -64,7 +64,7 @@ const Hero = () => {
   const four = (
     <>
       <p>
-        I'm a Full Stack Developer who specializes in building (and occasionally designing) exceptional
+        I'm a Software Developer who specializes in building (and occasionally designing) exceptional
         digital experiences. Currently, I'm working as a{' '}
         <a href="https://www.hellopixelbot.com/">Web and App Developer. </a> focused on
         building accessible, human-centered products.
