@@ -74,7 +74,7 @@ const Hero = () => {
   const five = (
     <a
       className="email-link"
-      href="https://mareaalcalina.com/menus/visualize-menu?id1=5ZqO7XcvP2hlstonWcR6DTLiuCn2&id2=QDFb0SL7fHaEm52z0vrJ"
+      href="https://wakatime.com/@yerick"
       target="_blank"
       rel="noreferrer">
       Get In Touch
