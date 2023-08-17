@@ -1,15 +1,14 @@
 ---
 date: '1'
-title: 'Marble Slab-App'
-cover: './ms.png'
-external: 'https://apps.apple.com/app/id1599580387?fbclid=IwAR0jGf46RSsJKwvI7a3eN3MFlfeYcHNMWo7oXNrfuzGXvAHUBllbt3F-pQk'
-cta: 'https://apps.apple.com/app/id1599580387?fbclid=IwAR0jGf46RSsJKwvI7a3eN3MFlfeYcHNMWo7oXNrfuzGXvAHUBllbt3F-pQk'
+title: 'Kaiber'
+cover: './kaiber.png'
+external: 'https://kaiber.ai/'
+cta: 'https://kaiber.ai/'
 tech:
-  - React Native
+  - React JS
   - JavaScript
   - Node Js(Express)
-  - MySQL
-
 ---
 
-Get your favourite treats with the NEW MARBLE SLAB mobile ordering app.
+Bring your dreams to life
+Tell stories like never before with our advanced AI generation engine

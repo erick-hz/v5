@@ -1,14 +1,14 @@
 ---
 date: '2'
-title: 'Lavish'
-cover: './demo.png'
-github: 'https://github.com/beatsxness/lavish'
-external: 'https://lavish-bx.web.app/'
+title: 'Marble Slab-App'
+cover: './ms.png'
+external: 'https://apps.apple.com/app/id1599580387?fbclid=IwAR0jGf46RSsJKwvI7a3eN3MFlfeYcHNMWo7oXNrfuzGXvAHUBllbt3F-pQk'
+cta: 'https://apps.apple.com/app/id1599580387?fbclid=IwAR0jGf46RSsJKwvI7a3eN3MFlfeYcHNMWo7oXNrfuzGXvAHUBllbt3F-pQk'
 tech:
-  - ReactJs
-  - Redux
-  - Router
-  - Hooks
+  - React Native
+  - JavaScript
+  - Node Js(Express)
+  - MySQL
 ---
 
-A web app for visualizing personalized the front end UI using React JS. The main sections of the site are made with reusable components that you can customize and add wherever you want.
+Get your favourite treats with the NEW MARBLE SLAB mobile ordering app.

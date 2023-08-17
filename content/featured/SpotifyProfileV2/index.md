@@ -1,14 +1,14 @@
 ---
 date: '3'
-title: 'Pizza-Dust'
-cover: './course-card.png'
-external: 'https://pizza-dust.web.app/'
-cta: 'https://pizza-dust.web.app/'
+title: 'Lavish'
+cover: './lavish.png'
+github: 'https://github.com/beatsxness/lavish'
+external: 'https://lavish-bx.web.app/'
 tech:
-  - React
-  - Express
-  - Spotify API
-  - Styled Components
+  - ReactJs
+  - Redux
+  - Router
+  - Hooks
 ---
 
-A simple restaurant pizza website design using React.
+A web app for visualizing personalized the front end UI using React JS. The main sections of the site are made with reusable components that you can customize and add wherever you want.
