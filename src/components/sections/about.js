@@ -146,15 +146,16 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Erick Hernandez and I'm from Mexico City. <br />I enjoy creating
-              things that live on the internet. My interest in web development started back in 2018
-              when I decided to try editing custom Tumblr themes — turns out hacking together a
-              custom reblog button taught me a lot about HTML &amp; CSS!
+              Hello! My name is Erick Hernandez
+              <br />I enjoy creating things that live on the internet. My interest in web
+              development started back in 2018 when I decided to try editing custom Tumblr themes —
+              turns out hacking together a custom reblog button taught me a lot about HTML &amp;
+              CSS!
             </p>
 
             <p>
-              Fast-forward to today, and I've had the privilege of working as a developer
-              at <a href="https://us.mullenlowe.com/">an advertising agency</a>,{' '}
+              Fast-forward to today, and I've had the privilege of working as a developer at{' '}
+              <a href="https://us.mullenlowe.com/">an advertising agency</a>,{' '}
               <a href="https://www.hellopixelbot.com/">a start-up</a>. My main focus these days is
               building accessible, inclusive products and digital experiences for a variety of
               clients.
