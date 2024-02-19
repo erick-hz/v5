@@ -64,19 +64,20 @@ const Hero = () => {
   const four = (
     <>
       <p>
-        I'm a Software Developer who specializes in building (and occasionally designing) exceptional
-        digital experiences. Currently, I'm working as a{' '}
-        <a href="https://www.hellopixelbot.com/">Web and App Developer. </a> focused on
-        building accessible, human-centered products.
+        I'm a Software Developer who specializes in building (and occasionally designing)
+        exceptional digital experiences. Currently, I'm working as a{' '}
+        <a href="https://www.hellopixelbot.com/">Web and App Developer. </a> focused on building
+        accessible, human-centered products.
       </p>
     </>
   );
   const five = (
     <a
       className="email-link"
-      href="https://wakatime.com/@yerick"
+      href="https://erickdev3d.netlify.app/"
       target="_blank"
-      rel="noreferrer">
+      rel="noreferrer"
+    >
       Get In Touch
     </a>
   );
