@@ -3,7 +3,7 @@ date: '2018-05-14'
 title: 'Front-end Engineer'
 company: 'Upstatement'
 location: 'Boston, MA'
-range: 'Nov 2020 - Jun 2021'
+range: 'Nov 2020 - Jul 2021'
 url: 'https://upstatement.com/'
 ---
 
