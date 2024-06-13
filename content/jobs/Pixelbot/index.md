@@ -3,7 +3,7 @@ date: '2021-01-08'
 title: 'Front-end Engineer'
 company: 'Pixelbot'
 location: 'Toronto, ON, Canada'
-range: 'Jul 2021 - Present'
+range: 'Jun 2021 - Jun 2024'
 url: 'https://www.hellopixelbot.com/'
 ---
 
@@ -12,6 +12,6 @@ url: 'https://www.hellopixelbot.com/'
 - Angular, React.js, & React-Native: Created page routing, components, modules, and RESTful services.
 - React.js, & React-Native: Implemented Redux Statement Management, created reducers, actions, & types
 - React Native: Developed & Tested Android & IOS mobile app across multiple devices & tablets
-- Node.js: Implemented Express.js framework. Created both public & authenticated API routes, database connections, and SMTP messaging. Used Knex to build SQL queries,   table migrations, transactions, and connection pooling.
+- Node.js: Implemented Express.js framework. Created both public & authenticated API routes, database connections, and SMTP messaging. Used Knex to build SQL queries, table migrations, transactions, and connection pooling.
 - MySQL: Created database schemas, queries, triggers, foreign keys, & unique indexe.
 - Unit Testing: Applied Unit Testing to Apex classes and triggers for a large Salesforce project.

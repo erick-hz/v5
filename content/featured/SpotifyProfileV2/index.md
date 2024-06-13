@@ -1,14 +1,15 @@
 ---
 date: '3'
-title: 'Lavish'
-cover: './lavish.png'
-github: 'https://github.com/beatsxness/lavish'
-external: 'https://lavish-bx.web.app/'
+title: 'Gotcare'
+cover: './gotcare.png'
+github: 'https://github.com/ganapathy-kevin/gotcare-wp-v2'
+external: 'https://gotcare.ca/'
+cta: 'https://gotcare.ca/'
 tech:
-  - ReactJs
-  - Redux
-  - Router
-  - Hooks
+  - PHP
+  - Salesforce
+  - WordPress
+  - Twilio
 ---
 
-A web app for visualizing personalized the front end UI using React JS. The main sections of the site are made with reusable components that you can customize and add wherever you want.
+Gotcare’s technology to efficiently enable careworkers to connect with patients in need of at-home care throughout the Province of Ontario.
