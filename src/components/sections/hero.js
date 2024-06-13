@@ -64,10 +64,13 @@ const Hero = () => {
   const four = (
     <>
       <p>
-        I'm a Software Developer who specializes in building (and occasionally designing)
-        exceptional digital experiences. Currently, I'm working as a{' '}
-        <a href="https://www.hellopixelbot.com/">Web and App Developer. </a> focused on building
-        accessible, human-centered products.
+        I am a Software Developer specializing in creating outstanding digital experiences.
+        Currently, I work as a Front End Developer at{' '}
+        <a href="https://kaiber.ai/" target="_blank" rel="noreferrer">
+          {' '}
+          Kaiber AI
+        </a>{' '}
+        , where I focus on crafting accessible, human-centered products.
       </p>
     </>
   );

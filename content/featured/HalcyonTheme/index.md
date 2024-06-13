@@ -2,6 +2,7 @@
 date: '1'
 title: 'Kaiber'
 cover: './kaiber.png'
+github: 'https://github.com/KaiberAI/memories'
 external: 'https://kaiber.ai/'
 cta: 'https://kaiber.ai/'
 tech:
