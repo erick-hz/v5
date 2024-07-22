@@ -1,9 +1,9 @@
 ---
 date: '2023-08-08'
 title: 'Front-end Engineer'
-company: 'Kaiber'
-range: 'Jun 2023 - Jun 2024'
-url: 'https://kaiber.ai/'
+company: 'Tech Mahindra'
+range: 'Jul 2024 - Present'
+url: 'https://www.techmahindra.com'
 ---
 
 - Development and Maintenance of Components using React JS.

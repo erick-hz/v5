@@ -147,15 +147,15 @@ const About = () => {
           <div>
             <p>
               <br />I enjoy creating things that live on the internet. My interest in web
-              development started back in 2018 when I decided to try editing custom Tumblr themes —
-              turns out hacking together a custom reblog button taught me a lot about React JS.
+              development began in 2018 when I started editing custom Tumblr themes. Experimenting
+              with a custom reblog button taught me a lot about React JS.
             </p>
 
             <p>
-              Fast-forward to today, and I've had the privilege of working as a developer at{' '}
-              <a href="https://www.hellopixelbot.com/">a start-up</a>. My main focus these days is
-              building accessible, inclusive products and digital experiences for a variety of
-              clients.
+              Fast forward to today, I have had the privilege of working at a{' '}
+              <a href="https://www.techmahindra.com/"> multinational software consulting company</a>
+              . My primary focus now is on building accessible, inclusive products and digital
+              experiences for a variety of clients.
             </p>
 
             <p>Here are a few technologies I’ve been working with recently:</p>

@@ -3,7 +3,7 @@ date: '2021-01-08'
 title: 'Front-end Engineer'
 company: 'Pixelbot'
 location: 'Toronto, ON, Canada'
-range: 'Jun 2021 - Jun 2024'
+range: 'Jun 2021 - Jul 2024'
 url: 'https://www.hellopixelbot.com/'
 ---
 
