@@ -126,15 +126,13 @@ const About = () => {
   }, []);
 
   const skills = [
-    'JavaScript(ES6+)',
-    'React Native',
     'React JS',
-    'Angular',
+    'Redux Toolkit (RTK)',
+    'React Native',
+    'Node JS',
+    'JavaScript(ES6+)',
     'WordPress',
     'HTML,CSS/Sass',
-    'Node JS',
-    'Python(Django)',
-    'Shopify(Liquid)',
     'MySQL',
   ];
 
