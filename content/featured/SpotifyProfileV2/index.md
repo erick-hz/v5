@@ -1,15 +1,15 @@
 ---
-date: '3'
-title: 'Gotcare'
-cover: './gotcare.png'
-github: 'https://github.com/ganapathy-kevin/gotcare-wp-v2'
-external: 'https://gotcare.ca/'
-cta: 'https://gotcare.ca/'
+date: '1'
+title: 'Scotiabank'
+cover: './scotiabank.png'
+github: 'https://www.scotiabank.com/ca/en/personal.html'
+external: 'https://www.scotiabank.com/ca/en/personal.html'
+cta: 'https://www.scotiabank.com/ca/en/personal.html'
 tech:
-  - PHP
-  - Salesforce
-  - WordPress
-  - Twilio
+  - React JS
+  - Redux Toolkit
+  - RTK Query
+  - Frontend Microservices
 ---
 
-Gotcare’s technology to efficiently enable careworkers to connect with patients in need of at-home care throughout the Province of Ontario.
+Scotiabank uses a modern architecture with backend and frontend microservices in React and Redux Toolkit, hosted on cloud platforms like GCP, Azure, and AWS. This setup enables scalable, independent application development and supports agile practices for efficient operations.

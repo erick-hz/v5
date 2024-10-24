@@ -1,5 +1,5 @@
 ---
-date: '2'
+date: '3'
 title: 'Marble Slab-App'
 cover: './ms.png'
 github: 'https://github.com/ganapathy-kevin/marbleslab-reactnative'
