@@ -66,8 +66,8 @@ const Hero = () => {
       <p>
         I am a Software Developer specializing in creating exceptional digital experiences.
         Currently, I work at{' '}
-        <a href="https://www.techmahindra.com/" target="_blank" rel="noreferrer">
-          Tech Mahindra
+        <a href="https://hexaware.com/" target="_blank" rel="noreferrer">
+          Hexaware
         </a>
         , where I focus on developing accessible, user-centric products.
       </p>

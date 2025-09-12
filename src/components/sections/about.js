@@ -151,9 +151,8 @@ const About = () => {
 
             <p>
               Fast forward to today, I have had the privilege of working at a{' '}
-              <a href="https://www.techmahindra.com/"> multinational software consulting company</a>
-              . My primary focus now is on building accessible, inclusive products and digital
-              experiences for a variety of clients.
+              <a href="https://hexaware.com/"> leading technology company</a>
+              , where I contribute to building user-centric web applications
             </p>
 
             <p>Here are a few technologies I’ve been working with recently:</p>
