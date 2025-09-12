@@ -2,7 +2,7 @@
 date: '2024-06-25'
 title: 'Front-end Engineer'
 company: 'Tech Mahindra'
-range: 'Jul 2024 - Present'
+range: 'Jun 2024 - Jul 2025'
 url: 'https://www.techmahindra.com'
 ---
 
