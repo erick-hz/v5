@@ -1,3 +1,103 @@
+# Personal Portfolio Website V5
+
+Personal portfolio website built with Gatsby, React, and styled-components. This site showcases projects, work experience, and blog posts in a professional and modern way.
+
+## 📋 Overview
+
+This is a static website generated with **Gatsby v4**, using React for the user interface and styled-components for styling. Content is managed through Markdown files in the `content/` folder, allowing easy editing and maintenance without the need for a database.
+
+### Key Features
+
+- ✨ Blazing fast static site generated with Gatsby
+- 📱 Fully responsive design
+- 🎨 Modern interface with smooth animations
+- 📝 Blog with Markdown support
+- 🖼️ Automatic image optimization
+- 🔍 SEO optimized with meta tags and sitemap
+- 📊 Google Analytics integration
+- 🌙 Custom styling with styled-components
+- ♿ Accessible and performance optimized
+- 📖 Syntax highlighting for code with PrismJS
+
+## 🏗️ Project Structure
+
+```
+v5/
+├── content/              # Markdown content
+│   ├── featured/         # Featured projects
+│   ├── jobs/            # Work experience
+│   ├── posts/           # Blog posts
+│   └── projects/        # Other projects
+├── src/
+│   ├── components/      # Reusable React components
+│   ├── pages/           # Gatsby pages
+│   ├── styles/          # Global styles and themes
+│   ├── templates/       # Templates for dynamic content
+│   ├── hooks/           # Custom React hooks
+│   ├── utils/           # Utility functions
+│   └── config.js        # Site configuration
+├── static/              # Static files
+└── gatsby-*.js          # Gatsby configuration files
+```
+
+## 🔧 Technologies and Dependencies
+
+### Core Framework
+
+- **Gatsby 4.25.9** - React-based framework for static sites
+- **React 18.3.1** - UI library
+- **React DOM 18.3.1** - React rendering
+
+### Styling
+
+- **styled-components 5.3.0** - CSS-in-JS for components
+- **babel-plugin-styled-components** - Better debugging and SSR
+
+### Content and Markdown
+
+- **gatsby-transformer-remark** - Processes Markdown files
+- **gatsby-remark-images** - Image optimization in Markdown
+- **gatsby-remark-prismjs** - Syntax highlighting for code
+- **gatsby-remark-external-links** - External links handling
+- **gatsby-remark-code-titles** - Code block titles
+
+### Images
+
+- **gatsby-plugin-image** - Optimized image component
+- **gatsby-plugin-sharp** - Image processing
+- **gatsby-transformer-sharp** - Image transformations
+
+### SEO and Analytics
+
+- **gatsby-plugin-react-helmet** - Meta tags management
+- **gatsby-plugin-sitemap** - Automatic sitemap generation
+- **gatsby-plugin-robots-txt** - robots.txt file
+- **gatsby-plugin-google-analytics** - Google Analytics integration
+
+### PWA and Performance
+
+- **gatsby-plugin-manifest** - Web app manifest
+- **gatsby-plugin-offline** - Service worker for offline functionality
+- **gatsby-plugin-netlify** - Netlify optimization
+
+### Animations
+
+- **animejs 3.1.0** - Animation library
+- **scrollreveal 4.0.5** - Scroll animations
+- **react-transition-group 4.3.0** - React transitions
+
+### Utilities
+
+- **lodash 4.17.21** - JavaScript utility functions
+- **prop-types 15.7.2** - React props validation
+
+### Development
+
+- **ESLint** - Code linting
+- **Prettier** - Code formatting
+- **Husky** - Git hooks
+- **lint-staged** - Staged files linting
+
 ## 🛠 Installation & Set Up
 
 1. Install the Gatsby CLI
