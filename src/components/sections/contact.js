@@ -64,11 +64,7 @@ const Contact = () => {
         best to get back to you!
       </p>
 
-      <a
-        className="email-link"
-        href="https://erickdev3d.netlify.app/"
-        target="_blank"
-        rel="noopener noreferrer">
+      <a className="email-link" href="/form">
         Say Hello
       </a>
     </StyledContactSection>

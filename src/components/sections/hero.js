@@ -74,11 +74,7 @@ const Hero = () => {
     </>
   );
   const five = (
-    <a
-      className="email-link"
-      href="https://erickdev3d.netlify.app/"
-      target="_blank"
-      rel="noreferrer">
+    <a className="email-link" href="/form">
       Get In Touch
     </a>
   );
