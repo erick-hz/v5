@@ -36,7 +36,7 @@ const StyledLinkWrapper = styled.div`
 `;
 
 const Email = ({ isHome }) => {
-  const subject = 'Hello!';
+  const subject = 'Hello';
   const body = 'Hi, I would like to get in touch with you.';
   const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(
     subject,
