@@ -130,24 +130,19 @@ const About = () => {
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
-      <h2 className="numbered-heading">About Me</h2>
+      <h2 className="numbered-heading">{translations.about.title}</h2>
 
       <div className="inner">
         <StyledText>
           <div>
-            <p>
-              <br />I enjoy creating things that live on the internet. My interest in web
-              development began in 2018 when I started editing custom Tumblr themes. Experimenting
-              with a custom reblog button taught me a lot about React JS.
-            </p>
+            <p>{translations.about.paragraph1}</p>
 
             <p>
-              Fast forward to today, I have had the privilege of working at a{' '}
-              <a href="https://hexaware.com/"> leading technology company</a>, where I contribute to
-              building user-centric web applications
+              {translations.about.paragraph2.replace('{company}', '')}
+              <a href={translations.about.companyUrl}>{translations.about.companyText}</a>
             </p>
 
-            <p>Here are a few technologies I’ve been working with recently:</p>
+            <p>{translations.about.paragraph3}</p>
           </div>
 
           <ul className="skills-list">

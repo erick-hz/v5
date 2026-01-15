@@ -65,11 +65,11 @@ const Hero = () => {
   const four = (
     <>
       <p>
-        {translations.hero.description.replace('{company}', '')}
+        {translations.hero.description}
         <a href={translations.hero.companyUrl} target="_blank" rel="noreferrer">
           {translations.hero.company}
         </a>
-        , where I focus on developing accessible, user-centric products.
+        {translations.hero.description2}
       </p>
     </>
   );

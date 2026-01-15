@@ -8,17 +8,18 @@
     "greeting": "Hi, my name is",
     "name": "Erick Hernandez",
     "tagline": "I build things for the web.",
-    "description": "I am a Software Developer specializing in creating exceptional digital experiences. Currently, I work at {company}, where I focus on developing accessible, user-centric products.",
+    "description": "I am a Software Developer building scalable web applications and delivering high-quality solutions at ",
+    "description2": ", where I focus on developing accessible, user-centric products.",
     "company": "Hexaware",
     "companyUrl": "https://hexaware.com/",
     "cta": "Get In Touch"
   },
   "about": {
     "title": "About Me",
-    "paragraph1": "I enjoy creating things that live on the internet. My interest in web development began in 2018 when I started editing custom Tumblr themes. Experimenting with a custom reblog button taught me a lot about React JS.",
-    "paragraph2": "Fast forward to today, I have had the privilege of working at a {company}, where I contribute to building user-centric web applications",
+    "paragraph1": "I enjoy creating things that live on the internet. I started by contributing to open-source projects in 2020, which led to working with startups and software consultancies building scalable, user-focused web applications.",
+    "paragraph2": "Currently, I am focused on continuous growth and impact, working at a ",
     "paragraph3": "Here are a few technologies I've been working with recently:",
-    "companyText": "leading technology company",
+    "companyText": "leading technology company.",
     "companyUrl": "https://hexaware.com/",
     "skills": [
       "React JS",
