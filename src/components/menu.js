@@ -74,7 +74,7 @@ const StyledHamburgerButton = styled.button`
       top: ${props => (props.menuOpen ? `0` : `-10px`)};
       opacity: ${props => (props.menuOpen ? 0 : 1)};
       transition: ${({ menuOpen }) =>
-        menuOpen ? 'var(--ham-before-active)' : 'var(--ham-before)'};
+    menuOpen ? 'var(--ham-before-active)' : 'var(--ham-before)'};
     }
     &:after {
       width: ${props => (props.menuOpen ? `100%` : `80%`)};
@@ -235,6 +235,12 @@ const Menu = () => {
   const wrapperRef = useRef();
   useOnClickOutside(wrapperRef, () => setMenuOpen(false));
 
+  const ResumeLink = (
+    <a className="resume-link" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+      Resume
+    </a>
+  );
+
   return (
     <StyledMenu>
       <Helmet>
@@ -266,9 +272,7 @@ const Menu = () => {
               </ol>
             )}
 
-            <a href="https://erickdev3d.netlify.app/" className="resume-link">
-              Resume
-            </a>
+            {ResumeLink}
           </nav>
         </StyledSidebar>
       </div>

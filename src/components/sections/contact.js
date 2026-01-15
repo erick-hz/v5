@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import { srConfig, email } from '@config';
+import { srConfig } from '@config';
 import sr from '@utils/sr';
 import { usePrefersReducedMotion } from '@hooks';
 
@@ -64,7 +64,11 @@ const Contact = () => {
         best to get back to you!
       </p>
 
-      <a className="email-link" href={`mailto:${email}`}>
+      <a
+        className="email-link"
+        href="https://erickdev3d.netlify.app/"
+        target="_blank"
+        rel="noopener noreferrer">
         Say Hello
       </a>
     </StyledContactSection>
