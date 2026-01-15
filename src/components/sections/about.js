@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { srConfig } from '@config';
 import sr from '@utils/sr';
 import { usePrefersReducedMotion } from '@hooks';
+import translations from '../../translations/translation-en.json';
 
 const StyledAboutSection = styled.section`
   max-width: 900px;
@@ -125,16 +126,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = [
-    'React JS',
-    'Redux Toolkit (RTK)',
-    'React Native',
-    'Node JS',
-    'JavaScript(ES6+)',
-    'WordPress',
-    'HTML,CSS/Sass',
-    'MySQL',
-  ];
+  const skills = translations.about.skills;
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>

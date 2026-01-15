@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { srConfig } from '@config';
 import sr from '@utils/sr';
 import { usePrefersReducedMotion } from '@hooks';
+import translations from '../../translations/translation-en.json';
 
 const StyledContactSection = styled.section`
   max-width: 600px;
@@ -55,17 +56,14 @@ const Contact = () => {
 
   return (
     <StyledContactSection id="contact" ref={revealContainer}>
-      <h2 className="numbered-heading overline">What’s Next?</h2>
+      <h2 className="numbered-heading overline">{translations.contact.overline}</h2>
 
-      <h2 className="title">Get In Touch</h2>
+      <h2 className="title">{translations.contact.title}</h2>
 
-      <p>
-        My inbox is always open. Whether you have a question or just want to say hi, I'll try my
-        best to get back to you!
-      </p>
+      <p>{translations.contact.description}</p>
 
       <a className="email-link" href="/form">
-        Say Hello
+        {translations.contact.cta}
       </a>
     </StyledContactSection>
   );

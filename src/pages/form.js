@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Layout } from '@components';
+import translations from '../translations/translation-en.json';
 
 // Constants
 const FORM_SUBMIT_URL = 'https://formsubmit.co/ajax/yerickk8@gmail.com';
@@ -26,12 +27,12 @@ const VALIDATION_RULES = {
     noUrls: true,
     noXss: true,
     messages: {
-      required: 'Name is required',
-      minLength: 'Name must be at least 2 characters',
-      maxLength: 'Name must be less than 50 characters',
-      pattern: 'Name can only contain letters',
-      noUrls: 'URLs are not allowed in this field',
-      noXss: 'Invalid characters detected',
+      required: translations.form.validation.name.required,
+      minLength: translations.form.validation.name.minLength,
+      maxLength: translations.form.validation.name.maxLength,
+      pattern: translations.form.validation.name.pattern,
+      noUrls: translations.form.validation.name.noUrls,
+      noXss: translations.form.validation.name.noXss,
     },
   },
   email: {
@@ -39,9 +40,9 @@ const VALIDATION_RULES = {
     maxLength: 100,
     pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
     messages: {
-      required: 'Email is required',
-      maxLength: 'Email is too long',
-      pattern: 'Please enter a valid email',
+      required: translations.form.validation.email.required,
+      maxLength: translations.form.validation.email.maxLength,
+      pattern: translations.form.validation.email.pattern,
     },
   },
   reason: {
@@ -52,12 +53,12 @@ const VALIDATION_RULES = {
     noXss: true,
     noSpam: true,
     messages: {
-      required: 'Message is required',
-      minLength: 'Message must be at least 10 characters',
-      maxLength: 'Message must be less than 500 characters',
-      noUrls: 'URLs are not allowed in messages',
-      noXss: 'Invalid characters detected',
-      noSpam: 'Spam content detected',
+      required: translations.form.validation.reason.required,
+      minLength: translations.form.validation.reason.minLength,
+      maxLength: translations.form.validation.reason.maxLength,
+      noUrls: translations.form.validation.reason.noUrls,
+      noXss: translations.form.validation.reason.noXss,
+      noSpam: translations.form.validation.reason.noSpam,
     },
   },
 };
@@ -449,10 +450,10 @@ const FormPage = ({ location }) => {
             name: formState.name.trim(),
             email: formState.email.trim(),
             reason: formState.reason.trim(),
-            emoji: formState.emoji || 'No emoji',
-            _captcha: 'true',
-            _subject: 'New Contact Form Submission',
-            _template: 'table',
+            emoji: formState.emoji || translations.form.formSubmit.emojiDefault,
+            _captcha: translations.form.formSubmit.captcha,
+            _subject: translations.form.formSubmit.subject,
+            _template: translations.form.formSubmit.template,
           }),
           signal: controller.signal,
         });
@@ -482,8 +483,8 @@ const FormPage = ({ location }) => {
   return (
     <Layout location={location}>
       <StyledFormSection>
-        <h1>Get In Touch</h1>
-        <p className="subtitle">Let's connect! Fill out the form below.</p>
+        <h1>{translations.form.title}</h1>
+        <p className="subtitle">{translations.form.subtitle}</p>
 
         <StyledForm onSubmit={handleSubmit}>
           {/* Honeypot field - hidden from users, catches bots */}
@@ -491,7 +492,8 @@ const FormPage = ({ location }) => {
 
           <div className={`form-group ${errors.name ? 'has-error' : ''}`}>
             <label htmlFor="name">
-              Name <span className="required">*</span>
+              {translations.form.fields.name.label}{' '}
+              <span className="required">{translations.form.fields.name.required}</span>
             </label>
             <input
               type="text"
@@ -500,7 +502,7 @@ const FormPage = ({ location }) => {
               value={formState.name}
               onChange={handleChange}
               onBlur={handleBlur}
-              placeholder="Your name"
+              placeholder={translations.form.fields.name.placeholder}
               required
             />
             {errors.name && <span className="field-error">{errors.name}</span>}
@@ -508,7 +510,8 @@ const FormPage = ({ location }) => {
 
           <div className={`form-group ${errors.email ? 'has-error' : ''}`}>
             <label htmlFor="email">
-              Email <span className="required">*</span>
+              {translations.form.fields.email.label}{' '}
+              <span className="required">{translations.form.fields.email.required}</span>
             </label>
             <input
               type="email"
@@ -517,7 +520,7 @@ const FormPage = ({ location }) => {
               value={formState.email}
               onChange={handleChange}
               onBlur={handleBlur}
-              placeholder="your.email@example.com"
+              placeholder={translations.form.fields.email.placeholder}
               required
             />
             {errors.email && <span className="field-error">{errors.email}</span>}
@@ -525,7 +528,8 @@ const FormPage = ({ location }) => {
 
           <div className={`form-group ${errors.reason ? 'has-error' : ''}`}>
             <label htmlFor="reason">
-              Message <span className="required">*</span>
+              {translations.form.fields.message.label}{' '}
+              <span className="required">{translations.form.fields.message.required}</span>
             </label>
             <textarea
               id="reason"
@@ -533,7 +537,7 @@ const FormPage = ({ location }) => {
               value={formState.reason}
               onChange={handleChange}
               onBlur={handleBlur}
-              placeholder="Tell me about your project or just say hi!"
+              placeholder={translations.form.fields.message.placeholder}
               required
             />
             {errors.reason && <span className="field-error">{errors.reason}</span>}
@@ -541,8 +545,8 @@ const FormPage = ({ location }) => {
 
           <div className="form-group">
             <label htmlFor="emoji">
-              Emoji (Optional)
-              <span className="emoji-hint"> - Express yourself! 😊</span>
+              {translations.form.fields.emoji.label}
+              <span className="emoji-hint">{translations.form.fields.emoji.hint}</span>
             </label>
             <input
               type="text"
@@ -550,29 +554,27 @@ const FormPage = ({ location }) => {
               name="emoji"
               value={formState.emoji}
               onChange={handleChange}
-              placeholder="😊"
+              placeholder={translations.form.fields.emoji.placeholder}
               className="emoji-input"
               maxLength="2"
             />
           </div>
 
           {status === STATUS.SUCCESS && (
-            <div className="success-message">
-              ✓ Message sent successfully! I'll get back to you soon.
-            </div>
+            <div className="success-message">{translations.form.messages.success}</div>
           )}
 
           {status === STATUS.ERROR && (
-            <div className="error-message">
-              ✗ Something went wrong. Please try again or email me directly.
-            </div>
+            <div className="error-message">{translations.form.messages.error}</div>
           )}
 
           <button
             type="submit"
             className="submit-button"
             disabled={status === STATUS.SUBMITTING || !isFormValid}>
-            {status === STATUS.SUBMITTING ? 'Sending...' : 'Send Message'}
+            {status === STATUS.SUBMITTING
+              ? translations.form.button.submitting
+              : translations.form.button.submit}
           </button>
         </StyledForm>
       </StyledFormSection>
