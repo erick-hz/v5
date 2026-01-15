@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import { Layout, Hero, About, Jobs, Featured, Projects, Contact } from '@components';
 
 console.log(
-  "%c /\\_/\\  \n( o.o ) \n > ^ <   ~ Yerick",
-  "color: purple; font-size: 14px; font-weight: bold;"
+  '%c /\\_/\\  \n( o.o ) \n > ^ <   ~ Yerick',
+  'color: purple; font-size: 14px; font-weight: bold;',
 );
 
 const StyledMainContainer = styled.main`
