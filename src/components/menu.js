@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { navLinks } from '@config';
 import { KEY_CODES } from '@utils';
 import { useOnClickOutside } from '@hooks';
+import translations from '../translations/translation-en.json';
 
 const StyledMenu = styled.div`
   display: none;
@@ -237,7 +238,7 @@ const Menu = () => {
 
   const ResumeLink = (
     <a className="resume-link" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-      Resume
+      {translations.nav.resume}
     </a>
   );
 
@@ -252,7 +253,7 @@ const Menu = () => {
           onClick={toggleMenu}
           menuOpen={menuOpen}
           ref={buttonRef}
-          aria-label="Menu">
+          aria-label={translations.nav.menu}>
           <div className="ham-box">
             <div className="ham-box-inner" />
           </div>

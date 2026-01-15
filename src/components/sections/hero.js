@@ -3,6 +3,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
 import { navDelay, loaderDelay } from '@utils';
 import { usePrefersReducedMotion } from '@hooks';
+import translations from '../../translations/translation-en.json';
 // import { email } from '@config';
 
 const StyledHeroSection = styled.section`
@@ -58,16 +59,15 @@ const Hero = () => {
     return () => clearTimeout(timeout);
   }, []);
 
-  const one = <h1>Hi, my name is</h1>;
-  const two = <h2 className="big-heading">Erick Hernandez</h2>;
-  const three = <h3 className="big-heading">I build things for the web.</h3>;
+  const one = <h1>{translations.hero.greeting}</h1>;
+  const two = <h2 className="big-heading">{translations.hero.name}</h2>;
+  const three = <h3 className="big-heading">{translations.hero.tagline}</h3>;
   const four = (
     <>
       <p>
-        I am a Software Developer specializing in creating exceptional digital experiences.
-        Currently, I work at{' '}
-        <a href="https://hexaware.com/" target="_blank" rel="noreferrer">
-          Hexaware
+        {translations.hero.description.replace('{company}', '')}
+        <a href={translations.hero.companyUrl} target="_blank" rel="noreferrer">
+          {translations.hero.company}
         </a>
         , where I focus on developing accessible, user-centric products.
       </p>
@@ -75,7 +75,7 @@ const Hero = () => {
   );
   const five = (
     <a className="email-link" href="/form">
-      Get In Touch
+      {translations.hero.cta}
     </a>
   );
 

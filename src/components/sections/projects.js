@@ -6,6 +6,7 @@ import { srConfig } from '@config';
 import sr from '@utils/sr';
 import { Icon } from '@components/icons';
 import { usePrefersReducedMotion } from '@hooks';
+import translations from '../../translations/translation-en.json';
 
 const StyledProjectsSection = styled.section`
   display: flex;
@@ -223,14 +224,18 @@ const Projects = () => {
             </div>
             <div className="project-links">
               {github && (
-                <a href={github} aria-label="GitHub Link" target="_blank" rel="noreferrer">
+                <a
+                  href={github}
+                  aria-label={translations.projects.ariaLabels.github}
+                  target="_blank"
+                  rel="noreferrer">
                   <Icon name="GitHub" />
                 </a>
               )}
               {external && (
                 <a
                   href={external}
-                  aria-label="External Link"
+                  aria-label={translations.projects.ariaLabels.external}
                   className="external"
                   target="_blank"
                   rel="noreferrer">
@@ -264,10 +269,10 @@ const Projects = () => {
 
   return (
     <StyledProjectsSection>
-      <h2 ref={revealTitle}>Other Noteworthy Projects</h2>
+      <h2 ref={revealTitle}>{translations.projects.title}</h2>
 
       <Link className="inline-link archive-link" to="/archive" ref={revealArchiveLink}>
-        view the archive
+        {translations.projects.archiveLink}
       </Link>
 
       <ul className="projects-grid">
@@ -302,7 +307,7 @@ const Projects = () => {
       </ul>
 
       <button className="more-button" onClick={() => setShowMore(!showMore)}>
-        Show {showMore ? 'Less' : 'More'}
+        {showMore ? translations.projects.showLess : translations.projects.showMore}
       </button>
     </StyledProjectsSection>
   );
