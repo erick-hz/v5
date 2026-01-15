@@ -151,8 +151,8 @@ const About = () => {
 
             <p>
               Fast forward to today, I have had the privilege of working at a{' '}
-              <a href="https://hexaware.com/"> leading technology company</a>
-              , where I contribute to building user-centric web applications
+              <a href="https://hexaware.com/"> leading technology company</a>, where I contribute to
+              building user-centric web applications
             </p>
 
             <p>Here are a few technologies I’ve been working with recently:</p>

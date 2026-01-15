@@ -78,8 +78,7 @@ const Hero = () => {
       className="email-link"
       href="https://erickdev3d.netlify.app/"
       target="_blank"
-      rel="noreferrer"
-    >
+      rel="noreferrer">
       Get In Touch
     </a>
   );
