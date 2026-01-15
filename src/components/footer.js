@@ -4,6 +4,11 @@ import styled from 'styled-components';
 import { Icon } from '@components/icons';
 import { socialMedia } from '@config';
 
+// Constants
+const GITHUB_USERNAME = 'erick-hz';
+const GITHUB_REPO = 'v5';
+const GITHUB_API_BASE = 'https://api.github.com';
+
 const StyledFooter = styled.footer`
   ${({ theme }) => theme.mixins.flexCenter};
   flex-direction: column;
@@ -67,27 +72,90 @@ const StyledCredit = styled.div`
   }
 `;
 
+// Component for individual stat
+const GitHubStat = ({ icon, value, label }) => (
+  <span aria-label={`${label}: ${value}`}>
+    <Icon name={icon} />
+    <span>{value.toLocaleString()}</span>
+  </span>
+);
+
+GitHubStat.propTypes = {
+  icon: PropTypes.string.isRequired,
+  value: PropTypes.number.isRequired,
+  label: PropTypes.string.isRequired,
+};
+
+// Validate GitHub API response data
+const isValidGitHubData = (stars, forks, followers, repos) =>
+  typeof stars === 'number' &&
+  typeof forks === 'number' &&
+  typeof followers === 'number' &&
+  typeof repos === 'number' &&
+  stars >= 0 &&
+  forks >= 0 &&
+  followers >= 0 &&
+  repos >= 0;
+
 const Footer = () => {
   const [githubInfo, setGitHubInfo] = useState({
-    stars: null,
-    forks: null,
+    stars: 0,
+    forks: 0,
+    followers: 0,
+    repos: 0,
   });
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    if (process.env.NODE_ENV !== 'production') {
-      return;
-    }
-    fetch('https://api.github.com/repos/erick-hz/v5')
-      .then(response => response.json())
-      .then(json => {
-        const { stargazers_count, forks_count } = json;
-        setGitHubInfo({
-          stars: stargazers_count,
-          forks: forks_count,
-        });
-      })
-      .catch(e => console.error(e));
+    const abortController = new AbortController();
+
+    const fetchGitHubInfo = async () => {
+      try {
+        setIsLoading(true);
+
+        const [repoResponse, userResponse] = await Promise.all([
+          fetch(`${GITHUB_API_BASE}/repos/${GITHUB_USERNAME}/${GITHUB_REPO}`, {
+            signal: abortController.signal,
+          }),
+          fetch(`${GITHUB_API_BASE}/users/${GITHUB_USERNAME}`, {
+            signal: abortController.signal,
+          }),
+        ]);
+
+        if (!repoResponse.ok || !userResponse.ok) {
+          throw new Error(`GitHub API error: ${repoResponse.status} / ${userResponse.status}`);
+        }
+
+        const [repoData, userData] = await Promise.all([repoResponse.json(), userResponse.json()]);
+
+        const { stargazers_count, forks_count } = repoData;
+        const { followers, public_repos } = userData;
+
+        if (isValidGitHubData(stargazers_count, forks_count, followers, public_repos)) {
+          setGitHubInfo({
+            stars: stargazers_count,
+            forks: forks_count,
+            followers,
+            repos: public_repos,
+          });
+        }
+      } catch (error) {
+        if (error.name !== 'AbortError') {
+          console.error('Error fetching GitHub stats:', error);
+        }
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchGitHubInfo();
+
+    return () => {
+      abortController.abort();
+    };
   }, []);
+
+  const hasGitHubStats = githubInfo.stars > 0 || githubInfo.followers > 0;
 
   return (
     <StyledFooter>
@@ -104,30 +172,22 @@ const Footer = () => {
         </ul>
       </StyledSocialLinks>
 
-      <StyledCredit tabindex="-1">
-        <a href="https://github.com/erick-hz">
+      <StyledCredit tabIndex="-1">
+        <a href={`https://github.com/${GITHUB_USERNAME}`} aria-label="GitHub Profile">
           <div>Designed &amp; Built by Erick Hernandez</div>
 
-          {githubInfo.stars && githubInfo.forks && (
+          {!isLoading && hasGitHubStats && (
             <div className="github-stats">
-              <span>
-                <Icon name="Star" />
-                <span>{githubInfo.stars.toLocaleString()}</span>
-              </span>
-              <span>
-                <Icon name="Fork" />
-                <span>{githubInfo.forks.toLocaleString()}</span>
-              </span>
+              <GitHubStat icon="Star" value={githubInfo.stars} label="Stars" />
+              <GitHubStat icon="Fork" value={githubInfo.forks} label="Forks" />
+              <GitHubStat icon="GitHub" value={githubInfo.followers} label="Followers" />
+              <GitHubStat icon="Folder" value={githubInfo.repos} label="Public Repos" />
             </div>
           )}
         </a>
       </StyledCredit>
     </StyledFooter>
   );
-};
-
-Footer.propTypes = {
-  githubInfo: PropTypes.object,
 };
 
 export default Footer;

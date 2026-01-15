@@ -35,13 +35,21 @@ const StyledLinkWrapper = styled.div`
   }
 `;
 
-const Email = ({ isHome }) => (
-  <Side isHome={isHome} orientation="right">
-    <StyledLinkWrapper>
-      <a href={`mailto:${email}`}>{email}</a>
-    </StyledLinkWrapper>
-  </Side>
-);
+const Email = ({ isHome }) => {
+  const subject = 'Hello';
+  const body = 'Hi, I would like to get in touch with you.';
+  const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(
+    subject,
+  )}&body=${encodeURIComponent(body)}`;
+
+  return (
+    <Side isHome={isHome} orientation="right">
+      <StyledLinkWrapper>
+        <a href={mailtoLink}>{email}</a>
+      </StyledLinkWrapper>
+    </Side>
+  );
+};
 
 Email.propTypes = {
   isHome: PropTypes.bool,
