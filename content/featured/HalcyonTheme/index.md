@@ -1,15 +1,15 @@
 ---
-date: '2'
+date: '3'
 title: 'Kaiber'
 cover: './kaiber.png'
-github: 'https://github.com/KaiberAI/memories'
+github: 'https://kaiber.ai/'
 external: 'https://kaiber.ai/'
 cta: 'https://kaiber.ai/'
 tech:
-  - React JS
+  - React
   - JavaScript
-  - Node Js(Express)
+  - Node.js
+  - Tailwind CSS
 ---
 
-Bring your dreams to life
-Tell stories like never before with our advanced AI generation engine
+AI-powered creative platform built with React and Node.js, focused on generating and managing multimedia content through a modular, scalable, and user-friendly interface styled with Tailwind CSS.
