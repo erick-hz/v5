@@ -7,11 +7,7 @@ range: 'Jun 2021 - Jul 2024'
 url: 'https://www.hellopixelbot.com/'
 ---
 
-- Performed software development for clients in diverse industries consisting of a broad range of technologies.
-- JavaScript Projects: In total, I’ve played a key role in developing and delivering complex 6 Angular, 2 React.js, & 2 React-Native, and 6 Node.js applications.
-- Angular, React.js, & React-Native: Created page routing, components, modules, and RESTful services.
-- React.js, & React-Native: Implemented Redux Statement Management, created reducers, actions, & types
-- React Native: Developed & Tested Android & IOS mobile app across multiple devices & tablets
-- Node.js: Implemented Express.js framework. Created both public & authenticated API routes, database connections, and SMTP messaging. Used Knex to build SQL queries, table migrations, transactions, and connection pooling.
-- MySQL: Created database schemas, queries, triggers, foreign keys, & unique indexe.
-- Unit Testing: Applied Unit Testing to Apex classes and triggers for a large Salesforce project.
+- Delivered software solutions for clients across multiple industries using JavaScript-based technologies.
+- Developed and maintained applications with Angular, React.js, React Native, and Node.js, including routing, components, and RESTful services.
+- Implemented Redux state management, backend APIs with Express.js, and database logic using MySQL and Knex.
+- Built and tested mobile applications (iOS & Android) and applied unit testing practices for web and enterprise platforms.

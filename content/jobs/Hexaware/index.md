@@ -6,7 +6,7 @@ range: 'Jul 2025 - Present'
 url: 'https://hexaware.com/'
 ---
 
-- Building and Maintaining Reusable UI Components with React JS.
-- State Management and Data Flow Implementation using Redux Toolkit.
-- API Integration and Data Handling with React and Redux.
-- Unit Testing and Performance Optimization using Jest and React Testing Library.
+- Building and maintaining reusable UI components with React, TypeScript, Motif.
+- Managing state and data flow using TypeScript, TanStack Query, and custom React hooks.
+- Implementing API integrations with Axios and TypeScript for strongly typed and reliable data handling.
+- Developing unit tests and performance optimizations using Jest and React Testing Library.

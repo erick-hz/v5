@@ -1,15 +1,18 @@
 ---
-date: '3'
-title: 'Marble Slab-App'
-cover: './ms.png'
-github: 'https://github.com/ganapathy-kevin/marbleslab-reactnative'
-external: 'https://apps.apple.com/app/id1599580387?fbclid=IwAR0jGf46RSsJKwvI7a3eN3MFlfeYcHNMWo7oXNrfuzGXvAHUBllbt3F-pQk'
-cta: 'https://apps.apple.com/app/id1599580387?fbclid=IwAR0jGf46RSsJKwvI7a3eN3MFlfeYcHNMWo7oXNrfuzGXvAHUBllbt3F-pQk'
+date: '1'
+title: 'EY (Ernst & Young)'
+cover: './ey.png'
+github: 'https://github.com/eyblockchain'
+external: 'https://www.ey.com/en_gl/services/audit/technology'
+cta: 'https://www.ey.com/en_gl/services/audit/technology'
 tech:
-  - React Native
-  - JavaScript
-  - Node Js(Express)
-  - MySQL
+  - React 18
+  - TypeScript
+  - Vite
+  - TanStack Query
+  - TanStack Router
+  - Motif Design System
+  - Tailwind CSS
 ---
 
-Get your favourite treats with the NEW MARBLE SLAB mobile ordering app.
+Enterprise micro-frontend built with React and Vite for audit and service management, featuring a modular architecture, MSAL authentication, and advanced state and routing management.
