@@ -1,5 +1,5 @@
 ---
-date: '2021-02-17'
+date: '2020-02-17'
 title: 'Lavish'
 github: 'https://github.com/beatsxness/lavish'
 external: 'https://lavish-bx.web.app/'

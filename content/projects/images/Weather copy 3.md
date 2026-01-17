@@ -1,16 +1,16 @@
 ---
-date: '2019-11-12'
-title: 'Weather-App'
-github: 'https://github.com/beatsxness'
-external: 'https://romantic-wozniak-ff15db.netlify.app/'
+date: '2021-08-12'
+title: 'Color.js'
+github: 'https://github.com/color-js/color.js'
+external: 'https://github.com/color-js/color.js'
 ios: ''
 android: ''
 tech:
-  - React.js
-  - Service Workers
-  - PWA
-  - Lighthouse
-company: 'Mexico City'
-showInProjects: false
+  - TypeScript
+  - Python
+  - CSS
+company: 'Open Source'
+showInProjects: true
 ---
-A Weather Progressive Web App. Covered topics: React.js, Service Workers, PWA, Lighthouse...
+
+Implemented improvements and participated in the development of the Color.js color conversion and manipulation library
