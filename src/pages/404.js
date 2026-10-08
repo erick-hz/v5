@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'gatsby';
-import { Helmet } from 'react-helmet';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { navDelay } from '@utils';
-import { Layout } from '@components';
+import { Layout, Seo } from '@components';
 import { usePrefersReducedMotion } from '@hooks';
 import translations from '../translations/translation-en.json';
 
@@ -31,6 +30,7 @@ const StyledHomeButton = styled(Link)`
 const NotFoundPage = ({ location }) => {
   const [isMounted, setIsMounted] = useState(false);
   const prefersReducedMotion = usePrefersReducedMotion();
+  const contentRef = useRef(null);
 
   useEffect(() => {
     if (prefersReducedMotion) {
@@ -42,7 +42,7 @@ const NotFoundPage = ({ location }) => {
   }, []);
 
   const content = (
-    <StyledMainContainer className="fillHeight">
+    <StyledMainContainer className="fillHeight" ref={contentRef}>
       <StyledTitle>{translations.notFound.title}</StyledTitle>
       <StyledSubtitle>{translations.notFound.subtitle}</StyledSubtitle>
       <StyledHomeButton to="/">{translations.notFound.cta}</StyledHomeButton>
@@ -51,14 +51,12 @@ const NotFoundPage = ({ location }) => {
 
   return (
     <Layout location={location}>
-      <Helmet title={translations.notFound.helmet} />
-
       {prefersReducedMotion ? (
         <>{content}</>
       ) : (
         <TransitionGroup component={null}>
           {isMounted && (
-            <CSSTransition timeout={500} classNames="fadeup">
+            <CSSTransition nodeRef={contentRef} timeout={500} classNames="fadeup">
               {content}
             </CSSTransition>
           )}
@@ -71,5 +69,9 @@ const NotFoundPage = ({ location }) => {
 NotFoundPage.propTypes = {
   location: PropTypes.object.isRequired,
 };
+
+export const Head = ({ location }) => (
+  <Seo location={location} title={translations.notFound.helmet} />
+);
 
 export default NotFoundPage;

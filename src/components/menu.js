@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Helmet } from 'react-helmet';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { navLinks } from '@config';
@@ -156,7 +155,7 @@ const StyledSidebar = styled.aside`
   }
 `;
 
-const Menu = () => {
+const Menu = React.forwardRef(function Menu(_, ref) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
@@ -233,6 +232,11 @@ const Menu = () => {
     };
   }, []);
 
+  useEffect(() => {
+    document.body.classList.toggle('blur', menuOpen);
+    return () => document.body.classList.remove('blur');
+  }, [menuOpen]);
+
   const wrapperRef = useRef();
   useOnClickOutside(wrapperRef, () => setMenuOpen(false));
 
@@ -243,11 +247,7 @@ const Menu = () => {
   );
 
   return (
-    <StyledMenu>
-      <Helmet>
-        <body className={menuOpen ? 'blur' : ''} />
-      </Helmet>
-
+    <StyledMenu ref={ref}>
       <div ref={wrapperRef}>
         <StyledHamburgerButton
           onClick={toggleMenu}
@@ -279,6 +279,6 @@ const Menu = () => {
       </div>
     </StyledMenu>
   );
-};
+});
 
 export default Menu;

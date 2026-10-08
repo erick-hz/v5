@@ -2,9 +2,8 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import kebabCase from 'lodash/kebabCase';
 import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
-import { Layout } from '@components';
+import { Layout, Seo } from '@components';
 
 const StyledTagsContainer = styled.main`
   max-width: 1000px;
@@ -38,8 +37,6 @@ const TagsPage = ({
   location,
 }) => (
   <Layout location={location}>
-    <Helmet title="Tags" />
-
     <StyledTagsContainer>
       <span className="breadcrumb">
         <span className="arrow">&larr;</span>
@@ -81,10 +78,12 @@ TagsPage.propTypes = {
 
 export default TagsPage;
 
+export const Head = ({ location }) => <Seo location={location} title="Tags" />;
+
 export const pageQuery = graphql`
   query {
     allMarkdownRemark(limit: 2000, filter: { frontmatter: { draft: { ne: true } } }) {
-      group(field: frontmatter___tags) {
+      group(field: { frontmatter: { tags: SELECT } }) {
         fieldValue
         totalCount
       }

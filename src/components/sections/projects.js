@@ -173,7 +173,7 @@ const Projects = () => {
           fileAbsolutePath: { regex: "/projects/" }
           frontmatter: { showInProjects: { ne: false } }
         }
-        sort: { fields: [frontmatter___date], order: DESC }
+        sort: { frontmatter: { date: DESC } }
       ) {
         edges {
           node {
@@ -193,7 +193,7 @@ const Projects = () => {
   const [showMore, setShowMore] = useState(false);
   const revealTitle = useRef(null);
   const revealArchiveLink = useRef(null);
-  const revealProjects = useRef([]);
+  const projectTransitionRefs = useRef([]);
   const prefersReducedMotion = usePrefersReducedMotion();
 
   useEffect(() => {
@@ -203,7 +203,11 @@ const Projects = () => {
 
     sr.reveal(revealTitle.current, srConfig());
     sr.reveal(revealArchiveLink.current, srConfig());
-    revealProjects.current.forEach((ref, i) => sr.reveal(ref, srConfig(i * 100)));
+    projectTransitionRefs.current.forEach(({ current }, i) => {
+      if (current) {
+        sr.reveal(current, srConfig(i * 100));
+      }
+    });
   }, []);
 
   const GRID_LIMIT = 6;
@@ -289,12 +293,15 @@ const Projects = () => {
               projectsToShow.map(({ node }, i) => (
                 <CSSTransition
                   key={i}
+                  nodeRef={
+                    projectTransitionRefs.current[i] ||
+                    (projectTransitionRefs.current[i] = React.createRef())
+                  }
                   classNames="fadeup"
                   timeout={i >= GRID_LIMIT ? (i - GRID_LIMIT) * 300 : 300}
                   exit={false}>
                   <StyledProject
-                    key={i}
-                    ref={el => (revealProjects.current[i] = el)}
+                    ref={projectTransitionRefs.current[i]}
                     style={{
                       transitionDelay: `${i >= GRID_LIMIT ? (i - GRID_LIMIT) * 100 : 0}ms`,
                     }}>
