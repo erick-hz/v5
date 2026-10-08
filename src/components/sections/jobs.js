@@ -170,7 +170,7 @@ const Jobs = () => {
     query {
       jobs: allMarkdownRemark(
         filter: { fileAbsolutePath: { regex: "/jobs/" } }
-        sort: { fields: [frontmatter___date], order: DESC }
+        sort: { frontmatter: { date: DESC } }
       ) {
         edges {
           node {
@@ -189,6 +189,7 @@ const Jobs = () => {
   `);
 
   const jobsData = data.jobs.edges;
+  const panelRefs = useRef(jobsData.map(() => React.createRef()));
 
   const [activeTabId, setActiveTabId] = useState(0);
   const [tabFocus, setTabFocus] = useState(null);
@@ -280,8 +281,14 @@ const Jobs = () => {
               const { title, url, company, range } = frontmatter;
 
               return (
-                <CSSTransition key={i} in={activeTabId === i} timeout={250} classNames="fade">
+                <CSSTransition
+                  key={i}
+                  nodeRef={panelRefs.current[i]}
+                  in={activeTabId === i}
+                  timeout={250}
+                  classNames="fade">
                   <StyledTabPanel
+                    ref={panelRefs.current[i]}
                     id={`panel-${i}`}
                     role="tabpanel"
                     tabIndex={activeTabId === i ? '0' : '-1'}

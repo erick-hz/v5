@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
@@ -27,6 +27,7 @@ const StyledSideElement = styled.div`
 const Side = ({ children, isHome, orientation }) => {
   const [isMounted, setIsMounted] = useState(!isHome);
   const prefersReducedMotion = usePrefersReducedMotion();
+  const contentRef = useRef(null);
 
   useEffect(() => {
     if (!isHome || prefersReducedMotion) {
@@ -43,8 +44,11 @@ const Side = ({ children, isHome, orientation }) => {
       ) : (
         <TransitionGroup component={null}>
           {isMounted && (
-            <CSSTransition classNames={isHome ? 'fade' : ''} timeout={isHome ? loaderDelay : 0}>
-              {children}
+            <CSSTransition
+              nodeRef={contentRef}
+              classNames={isHome ? 'fade' : ''}
+              timeout={isHome ? loaderDelay : 0}>
+              <div ref={contentRef}>{children}</div>
             </CSSTransition>
           )}
         </TransitionGroup>

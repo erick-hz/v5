@@ -4,7 +4,7 @@ Personal portfolio website built with Gatsby, React, and styled-components. This
 
 ## 📋 Overview
 
-This is a static website generated with **Gatsby v4**, using React for the user interface and styled-components for styling. Content is managed through Markdown files in the `content/` folder, allowing easy editing and maintenance without the need for a database.
+This is a static website generated with **Gatsby v5**, using React for the user interface and styled-components for styling. Content is managed through Markdown files in the `content/` folder, allowing easy editing and maintenance without the need for a database.
 
 ### Key Features
 
@@ -44,7 +44,7 @@ v5/
 
 ### Core Framework
 
-- **Gatsby 4.25.9** - React-based framework for static sites
+- **Gatsby 5.16** - React-based framework for static sites
 - **React 18.3.1** - UI library
 - **React DOM 18.3.1** - React rendering
 
@@ -69,7 +69,7 @@ v5/
 
 ### SEO and Analytics
 
-- **gatsby-plugin-react-helmet** - Meta tags management
+- **Gatsby Head API** - Page titles and meta tags
 - **gatsby-plugin-sitemap** - Automatic sitemap generation
 - **gatsby-plugin-robots-txt** - robots.txt file
 - **gatsby-plugin-google-analytics** - Google Analytics integration
@@ -100,28 +100,22 @@ v5/
 
 ## 🛠 Installation & Set Up
 
-1. Install the Gatsby CLI
-
-   ```sh
-   npm install -g gatsby-cli
-   ```
-
-2. Install and use the correct version of Node using [NVM](https://github.com/nvm-sh/nvm)
+1. Install and use the correct version of Node using [NVM](https://github.com/nvm-sh/nvm)
 
    ```sh
    nvm install
    ```
 
-3. Install dependencies
+2. Install dependencies
 
    ```sh
-   yarn
+   yarn install
    ```
 
-4. Start the development server
+3. Start the development server
 
    ```sh
-   npm start
+   yarn start
    ```
 
 ## 🚀 Building and Running for Production
@@ -129,13 +123,13 @@ v5/
 1. Generate a full static production build
 
    ```sh
-   npm run build
+   yarn build
    ```
 
 1. Preview the site as it will appear once deployed
 
    ```sh
-   npm run serve
+   yarn serve
    ```
 
 ## 🎨 Color Reference
