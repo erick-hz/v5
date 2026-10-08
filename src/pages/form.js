@@ -2,7 +2,7 @@ import React, { useState, useCallback, useMemo } from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Layout } from '@components';
+import { Layout, Seo } from '@components';
 import translations from '../translations/translation-en.json';
 
 // Constants
@@ -581,6 +581,8 @@ const FormPage = ({ location }) => {
     </Layout>
   );
 };
+
+export const Head = ({ location }) => <Seo location={location} title={translations.form.title} />;
 
 FormPage.propTypes = {
   location: PropTypes.object.isRequired,

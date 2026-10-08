@@ -2,9 +2,8 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import kebabCase from 'lodash/kebabCase';
 import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
-import { Layout } from '@components';
+import { Layout, Seo } from '@components';
 
 const StyledTagsContainer = styled.main`
   max-width: 1000px;
@@ -51,8 +50,6 @@ const TagTemplate = ({ pageContext, data, location }) => {
 
   return (
     <Layout location={location}>
-      <Helmet title={`Tagged: #${tag}`} />
-
       <StyledTagsContainer>
         <span className="breadcrumb">
           <span className="arrow">&larr;</span>
@@ -123,11 +120,15 @@ TagTemplate.propTypes = {
   location: PropTypes.object,
 };
 
+export const Head = ({ pageContext, location }) => (
+  <Seo location={location} title={`Tagged: #${pageContext.tag}`} />
+);
+
 export const pageQuery = graphql`
   query ($tag: String!) {
     allMarkdownRemark(
       limit: 2000
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
       filter: { frontmatter: { tags: { in: [$tag] } } }
     ) {
       totalCount

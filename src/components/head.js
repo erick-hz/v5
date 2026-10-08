@@ -1,43 +1,40 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
-import { useLocation } from '@reach/router';
 import { useStaticQuery, graphql } from 'gatsby';
 
 // https://www.gatsbyjs.com/docs/add-seo-component/
 
-const Head = ({ title = null, description = null, image = null }) => {
-  const { pathname } = useLocation();
+const Seo = ({ title = null, description = null, image = null, location }) => {
+  const pathname = location?.pathname || '/';
 
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            defaultTitle: title
-            defaultDescription: description
-            siteUrl
-            defaultImage: image
-            twitterUsername
-          }
+  const { site } = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          defaultTitle: title
+          defaultDescription: description
+          siteUrl
+          defaultImage: image
+          twitterUsername
         }
       }
-    `,
-  );
+    }
+  `);
 
   const { defaultTitle, defaultDescription, siteUrl, defaultImage, twitterUsername } =
     site.siteMetadata;
 
   const seo = {
-    title: title || defaultTitle,
+    title: title ? `${title} | ${defaultTitle}` : defaultTitle,
     description: description || defaultDescription,
     image: `${siteUrl}${image || defaultImage}`,
     url: `${siteUrl}${pathname}`,
   };
 
   return (
-    <Helmet title={title} defaultTitle={seo.title} titleTemplate={`%s | ${defaultTitle}`}>
+    <>
       <html lang="en" />
+      <title>{seo.title}</title>
 
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
@@ -55,14 +52,17 @@ const Head = ({ title = null, description = null, image = null }) => {
       <meta name="twitter:image" content={seo.image} />
 
       <meta name="google-site-verification" content="DCl7VAf9tcz6eD9gb67NfkNnJ1PKRNcg8qQiwpbx9Lk" />
-    </Helmet>
+    </>
   );
 };
 
-export default Head;
+export default Seo;
 
-Head.propTypes = {
+Seo.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.string,
+  location: PropTypes.shape({
+    pathname: PropTypes.string,
+  }),
 };
